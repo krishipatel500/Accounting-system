@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Accounting System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Accounting System</h2>
+
+    <!-- Form -->
+    <div class="form-group">
+      <label for="type">Type:</label>
+      <select id="type">
+        <option value="Credit">Credit</option>
+        <option value="Debit">Debit</option>
+      </select>
+
+      <label for="product">Name:</label>
+      <input type="text" id="product" placeholder="Enter Name">
+
+      <label for="amount">Product Amount:</label>
+      <input type="number" id="amount" placeholder="Enter Amount">
+
+      <button onclick="addEntry()">Add</button>
+    </div>
+
+    <!-- Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Credit Amount</th>
+          <th>Debit Amount</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="entryTable"></tbody>
+      
+<tfoot>
+  <tr>
+    <td colspan="2"><strong>Totals</strong></td>
+    <td id="totalCredit" class="credit">0</td>
+    <td id="totalDebit" class="debit">0</td>
+    <td id="difference" class="diff">0</td>
+  </tr>
+</tfoot>
+
+    </table>
+
+    <!-- Save Button -->
+    <button id="saveBtn">Save</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
